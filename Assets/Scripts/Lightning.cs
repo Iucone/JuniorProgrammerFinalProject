@@ -20,6 +20,7 @@ public class Lightning : MonoBehaviour
     private float lastFlashesTime = 0f;
     private float flashesEventTimeElapsed = 0f;
     private AudioSource audioSource;
+    private LightFlashes lightFlashes;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -30,6 +31,7 @@ public class Lightning : MonoBehaviour
 
         // Ottiene o aggiunge un AudioSource al GameObject
         audioSource = GetComponent<AudioSource>();
+        lightFlashes = GetComponent<LightFlashes>();
     }
 
 
@@ -39,12 +41,21 @@ public class Lightning : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            lightFlashes.StartFlashes(Random.Range(flashesDuration[0], flashesDuration[1]));
             audioSource.PlayOneShot(lightningAudioClips[Random.Range(0, lightningAudioClips.Length)]);
             
             //StartCoroutine(nameof(SimulateFlashes));
             StartCoroutine(nameof(SimulateLightingStrike));
         }
 
+        if (Time.time - lastFlashesTime >= minTimeBetweenFlashes + extraFlashesDelay)
+        {
+            lastFlashesTime = Time.time;
+            extraFlashesDelay = Random.Range(0f, 15f);
+            lightFlashes.StartFlashes(Random.Range(flashesDuration[0], flashesDuration[1]));
+        }
+
+        /*
         if (Time.time - lastFlashesTime >= minTimeBetweenFlashes + extraFlashesDelay)
         {
             flashesEventTimeElapsed += Time.deltaTime;
@@ -59,11 +70,18 @@ public class Lightning : MonoBehaviour
             else
             {
                 envLight.intensity += (Mathf.PerlinNoise1D(Time.time * 2.5f) - 0.5f) * 0.35f;
-                envLight.intensity = Mathf.Clamp(envLight.intensity, 1.24f, 6f);
+                envLight.intensity = Mathf.Clamp(envLight.intensity, 1.24f, 7f);
             }
 
         }
-        else envLight.intensity = Mathf.Lerp(envLight.intensity, 1.24f, 0.5f);
+        //else envLight.intensity = Mathf.Lerp(envLight.intensity, 1.24f, 0.5f);
+        else
+        {
+            envLight.intensity -= Time.deltaTime;
+            if (envLight.intensity < 1.24f)
+                envLight.intensity = 1.24f;
+        }
+        */
 
     }
 
