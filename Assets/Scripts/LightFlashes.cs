@@ -42,15 +42,15 @@ public class LightFlashes : MonoBehaviour
             }
             else
             {
-                envLight.intensity += (Mathf.PerlinNoise1D(Time.time * 2.5f) - 0.5f) * 0.35f;
-                envLight.intensity = Mathf.Clamp(envLight.intensity, 1.24f, 7f);
+                envLight.intensity += (Mathf.PerlinNoise1D(Time.time * 3.5f) - 0.5f) * 3.00f;
+                envLight.intensity = Mathf.Clamp(envLight.intensity, 1.24f, 30f);
             }
 
         }
         //else envLight.intensity = Mathf.Lerp(envLight.intensity, 1.24f, 0.5f);
         else
         {
-            envLight.intensity -= Time.deltaTime;
+            envLight.intensity -= Time.deltaTime*2.0f;
             if (envLight.intensity < 1.24f)
                 envLight.intensity = 1.24f;
 
