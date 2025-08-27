@@ -15813,7 +15813,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4147537528483634917, guid: 2273dfb736bd513498655d5483607019, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8590241743609666601, guid: 2273dfb736bd513498655d5483607019, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21689,8 +21689,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ddaf339cd3090bf449cf443c1bee6d99, type: 3}
-  m_Resource: {fileID: 8300000, guid: ddaf339cd3090bf449cf443c1bee6d99, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f10e9483952c29942b40f217f916d4ba, type: 3}
+  m_Resource: {fileID: 8300000, guid: f10e9483952c29942b40f217f916d4ba, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.54
   m_Pitch: 1
@@ -33105,6 +33105,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 62045674}
     m_Modifications:
     - target: {fileID: 850173248660118217, guid: 539f6adab5fa4134498a9234fdd57f26, type: 3}
+      propertyPath: lengthInSec
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 850173248660118217, guid: 539f6adab5fa4134498a9234fdd57f26, type: 3}
       propertyPath: RotationModule.curve.scalar
       value: -0.61086524
       objectReference: {fileID: 0}
@@ -33112,17 +33116,33 @@ PrefabInstance:
       propertyPath: RotationModule.curve.minScalar
       value: 0.61086524
       objectReference: {fileID: 0}
+    - target: {fileID: 850173248660118217, guid: 539f6adab5fa4134498a9234fdd57f26, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1764772591008976606, guid: 539f6adab5fa4134498a9234fdd57f26, type: 3}
       propertyPath: m_Name
       value: AvalancheV2
       objectReference: {fileID: 0}
+    - target: {fileID: 1764772591008976606, guid: 539f6adab5fa4134498a9234fdd57f26, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035838109283941178, guid: 539f6adab5fa4134498a9234fdd57f26, type: 3}
+      propertyPath: m_Name
+      value: AvalancheV2_2
+      objectReference: {fileID: 0}
     - target: {fileID: 5218620755107957474, guid: 539f6adab5fa4134498a9234fdd57f26, type: 3}
       propertyPath: startDelay.scalar
-      value: 4.5
+      value: 5.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5218620755107957474, guid: 539f6adab5fa4134498a9234fdd57f26, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 0.9529412
       objectReference: {fileID: 0}
     - target: {fileID: 8896507371142967226, guid: 539f6adab5fa4134498a9234fdd57f26, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -32.2
+      value: -35
       objectReference: {fileID: 0}
     - target: {fileID: 8896507371142967226, guid: 539f6adab5fa4134498a9234fdd57f26, type: 3}
       propertyPath: m_LocalPosition.y
@@ -33130,7 +33150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8896507371142967226, guid: 539f6adab5fa4134498a9234fdd57f26, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 33.7
+      value: 29.9
       objectReference: {fileID: 0}
     - target: {fileID: 8896507371142967226, guid: 539f6adab5fa4134498a9234fdd57f26, type: 3}
       propertyPath: m_LocalRotation.w
@@ -33477,7 +33497,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6421473006018704872, guid: 5ee68325b591ea649b34b55b2a822004, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
